@@ -2,7 +2,7 @@ A [Giter8][g8] template for the official Colossus quickstart example project wit
 
 Usage
 -
-==The example assumes that you have Redis (port 6379) and Memcached (port 11211) running on your local machine.==
+***>> the example assumes that you have Redis (port 6379) and Memcached (port 11211) running on your local machine <<***
 
 	$ sbt new cuno/colossus-quickstart.g8
 
