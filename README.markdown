@@ -1,17 +1,17 @@
 A [Giter8][g8] template for the official Colossus quickstart example project with Redis and Memcached support.
 
-Requirements
+Usage
 -
-The example assumes that you have running on your local machine:
-- Redis (port 6379)
-- Memcached (port 11211)
+==The example assumes that you have Redis (port 6379) and Memcached (port 11211) running on your local machine.==
 
-Running
--
-The [sbt-revolver](https://github.com/spray/sbt-revolver)  plugin was added to the project. In sbt's interactive mode use the following command:
+	$ sbt new cuno/colossus-quickstart.g8
 
+Your new project will have the [sbt-revolver](https://github.com/spray/sbt-revolver)  plugin added to it, you can use the `~re-start` command to run the application in "triggered restart" mode.
+
+	$ sbt
+	...
 	> ~reStart
-That will run the application in "triggered restart" mode. You should now be able to send requests to it E.G.
+You should now be able to send requests to it E.G.
 
 	$ curl --data '{ "value" : "Hello world!" }' http://localhost:9000/set/mykey
 	$ curl -X GET http://localhost:9000/get/mykey
