@@ -95,7 +95,7 @@ class RedisService(context: ServerContext, redisClient: RedisClient[Callback], c
   }
 }
 
-class RedisInitializer(workerref: WorkerRef) extends Initializer(workerref) {
+class RedisInitializer(workerRef: WorkerRef) extends Initializer(workerRef) {
   val redisClient = Redis.client("localhost", 6379)
 
   def onConnect = context => new RedisService(
