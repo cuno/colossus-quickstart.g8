@@ -11,5 +11,5 @@ object Main extends App {
   val name = "iosystem"
   implicit val io = IOSystem()
 
-  Server.start("hello-redis-memcached", 9000) { worker => new RedisInitializer(worker) }
+  Server.start("hello-redis-memcached", 9000) {new RedisInitializer(_) }
 }
